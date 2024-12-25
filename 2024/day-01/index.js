@@ -1014,10 +1014,13 @@
     firstArr.sort();
     secondArr.sort();
 
-    let res = 0;
+    let res1 = 0;
+    let res2 = 0;
     for (let i = 0; i < firstArr.length; i++) {
-        res += firstArr[i] * (secondArrMap[firstArr[i]] || 0);
+        res1 += Math.abs(firstArr[i] - secondArr[i]);
+        res2 += firstArr[i] * (secondArrMap[firstArr[i]] || 0);
     }
 
-    console.log(res)
+    console.log(res1);
+    console.log(res2);
 })();
