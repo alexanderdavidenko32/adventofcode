@@ -32,7 +32,7 @@ function part1() {
 
     res = run(inputArr, [0, 0], directions.E);
 
-    console.log(res.size);
+    console.log(res);
 }
 
 function parseInput(inputText) {
@@ -130,7 +130,7 @@ function run(maze, start, startDirection) {
         }
     }
 
-    return visited;
+    return visited.size;
 }
 
 function inBoundaries(maze, point) {
@@ -147,13 +147,13 @@ function part2() {
         const top = run(inputArr, [0, i], directions.S);
         const bottom = run(inputArr, [inputArr.length - 1, i], directions.N);
 
-        res = Math.max(res, top.size, bottom.size);
+        res = Math.max(res, top, bottom);
     }
     for (let i = 0; i < inputArr.length; i++) {
         const left = run(inputArr, [i, 0], directions.E);
         const right = run(inputArr, [i, inputArr[0].length - 1], directions.W);
 
-        res = Math.max(res, left.size, right.size);
+        res = Math.max(res, left, right);
     }
 
     console.log(res);
