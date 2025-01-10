@@ -1,9 +1,11 @@
 import { Heap } from 'heap-js';
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = 17;
 
-const timeLabel = 'AOC 2023. day 17';
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const directions = {
     N: [-1, 0],

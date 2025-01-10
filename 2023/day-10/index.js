@@ -1,8 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in4.txt', 'utf8');
+const day = 10;
 
-const timeLabel = 'AOC 2023. day 10';
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const directions = {
     N: [-1, 0],

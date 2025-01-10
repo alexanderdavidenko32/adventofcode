@@ -1,7 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = '22';
 
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 function part1() {
     const inputArr = input.split('\n').map(item => BigInt(item));
@@ -101,5 +104,7 @@ function part2() {
     console.log(max);
 }
 
+console.time(timeLabel);
 part1();
 part2();
+console.timeEnd(timeLabel);

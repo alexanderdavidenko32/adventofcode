@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in2.txt', 'utf8');
+const day = '24';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const [wires, logic] = input.split('\n\n');
 const wiresArr = wires.split('\n').map(item => item.split(': '));
@@ -132,5 +136,7 @@ function part2() {
     console.log(res);
 }
 
+console.time(timeLabel);
 part1();
 part2();
+console.timeEnd(timeLabel);

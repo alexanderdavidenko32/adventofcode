@@ -1,26 +1,22 @@
+import fs from 'fs';
+
 (() => {
-    // let regA = 729;
-    // let regB = 0;
-    // let regC = 0;
-    // const program = '0,1,5,4,3,0';
+    const day = '17';
 
-    /// part1
-    let regA = 18427963n;
-    let regB = 0n;
-    let regC = 0n;
-    const program = '2,4,1,1,7,5,0,3,4,3,1,6,5,5,3,0';
+    const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-    // let regA = 0;
-    // let regA = 117440;
-    // let regB = 0;
-    // let regC = 0;
-    // const program = '0,3,5,4,3,0';
+    const timeLabel = 'AOC 2023. day ' + day;
 
-// Register A: 2024
-// Register B: 0
-// Register C: 0
+    const [registerLine, programLine] = input.split('\n\n');
+    let [regA, regB, regC] = registerLine.split('\n').map(line => {
+        const [, reg] = line.split(': ');
 
-// Program: 0,3,5,4,3,0
+        return BigInt(reg);
+    })
+
+    const [, programStr] = programLine.split(': ');
+    const program = programStr
+
 
     const programArr  = program.split(',').map(item => BigInt(+item));
 
@@ -146,6 +142,8 @@
         }
     }
 
+    console.time(timeLabel);
     part1();
     part2();
+    console.timeEnd(timeLabel);
 })();

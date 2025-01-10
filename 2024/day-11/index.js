@@ -1,6 +1,13 @@
+import fs from 'fs';
+
 (() => {
+    const day = '11';
+
+    const input1 = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+    const timeLabel = 'AOC 2023. day ' + day;
+
     const input = '125 17';
-    const input1 = '0 7 198844 5687836 58 2478 25475 894';
 
     const inputArray = input1.split(' ');
 
@@ -103,6 +110,8 @@
         }
     }
 
+    console.time(timeLabel);
     part1();
     part2();
+    console.timeEnd(timeLabel);
 })();

@@ -1,9 +1,12 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = '06';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const inputArr = input.split('\n');
-const timeLabel = 'AOC 2023. day 06';
 
 function part1() {
     let res = 1;

@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = '20';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const directions = {
     N: [-1, 0],
@@ -98,5 +102,7 @@ function renderArr(arr) {
     return arr.map(item => item.join('')).join('\n');
 }
 
+console.time(timeLabel);
 part1(input, 2);
 part2(input, 20);
+console.timeEnd(timeLabel);

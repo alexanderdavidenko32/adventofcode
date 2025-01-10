@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in2.txt', 'utf8');
+const day = '01';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const inputs = input.split('\n');
 
@@ -114,5 +118,7 @@ function replaceTextNumbers(text, numbersMap) {
     return text;
 }
 
+console.time(timeLabel);
 part1();
 part2();
+console.timeEnd(timeLabel);

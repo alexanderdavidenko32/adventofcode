@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in2.txt', 'utf8');
+const day = '25';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const inputArr = input.split('\n\n').map(item => item.split('\n').map(subItem => subItem.split('')));
 
@@ -59,5 +63,7 @@ function getCounts(arr) {
 function part2() {
 }
 
+console.time(timeLabel);
 part1();
 part2();
+console.timeEnd(timeLabel);

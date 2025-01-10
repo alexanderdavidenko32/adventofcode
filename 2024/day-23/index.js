@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in2.txt', 'utf8');
+const day = '23';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const inputArr = input.split('\n').map(item => item.split('-'));
 
@@ -95,5 +99,7 @@ function findMaxClique(connections) {
     return maxClique.sort().join(',');
 }
 
+console.time(timeLabel);
 part1();
 part2();
+console.timeEnd(timeLabel);

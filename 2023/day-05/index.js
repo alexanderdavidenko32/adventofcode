@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = '05';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const inputArr = input.split('\n\n');
 
@@ -130,7 +134,7 @@ function isSeedPresent(seed, seedRanges) {
     return seedRanges.some(([start, end]) => start <= seed && seed <= end);
 }
 
-console.time('AOC 2023. day 05');
+console.time(timeLabel);
 part1();
 part2();
-console.timeEnd('AOC 2023. day 05');
+console.timeEnd(timeLabel);

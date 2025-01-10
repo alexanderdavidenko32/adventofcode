@@ -1,8 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in2.txt', 'utf8');
+const day = '08';
 
-const timeLabel = 'AOC 2023. day 08';
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 function part1() {
     const [steps, tree] = parseInput(input);

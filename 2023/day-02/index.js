@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = '02';
+
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const inputs = input.split('\n');
 
@@ -56,5 +60,7 @@ function part2() {
     console.log(sum);
 }
 
+console.time(timeLabel);
 part1();
 part2();
+console.timeEnd(timeLabel);

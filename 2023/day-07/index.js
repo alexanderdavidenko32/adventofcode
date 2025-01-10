@@ -1,8 +1,10 @@
 import fs from 'fs';
 
-const input = fs.readFileSync('in1.txt', 'utf8');
+const day = '07';
 
-const timeLabel = 'AOC 2023. day 07';
+const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
+
+const timeLabel = 'AOC 2023. day ' + day;
 
 const cardToHexMap = {
     '2': '2',
