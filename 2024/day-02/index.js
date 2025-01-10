@@ -26,12 +26,22 @@ import fs from 'fs';
     let res = array.filter(row => {
         const rowArray = row.split(' ').map(item => +item);
 
-        if (isSafe2(rowArray)) {
+        if (isSafe(rowArray)) {
+            return true;
+        }
+    });
+
+    console.log(res.length);
+
+     res = array.filter(row => {
+        const rowArray = row.split(' ').map(item => +item);
+
+        if (isSafe(rowArray)) {
             return true;
         } else {
             for (let i = 0; i < rowArray.length; i++) {
                 const copy = [...rowArray].filter((item, index) => index !== i);
-                const isSafeSubArray = isSafe2(copy);
+                const isSafeSubArray = isSafe(copy);
 
                 if (isSafeSubArray) {
                     return true
@@ -44,7 +54,7 @@ import fs from 'fs';
 
     console.log(res.length);
 
-    function isSafe2(array) {
+    function isSafe(array) {
         const diffs = [];
 
         for (let i = 0; i < array.length - 1; i++) {
