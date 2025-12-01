@@ -4,7 +4,7 @@ const day = '20';
 
 const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-const timeLabel = 'AOC 2023. day ' + day;
+const timeLabel = 'AOC 2024. day ' + day;
 
 const directions = {
     N: [-1, 0],

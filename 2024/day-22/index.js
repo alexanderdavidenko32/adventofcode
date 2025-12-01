@@ -4,7 +4,7 @@ const day = '22';
 
 const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-const timeLabel = 'AOC 2023. day ' + day;
+const timeLabel = 'AOC 2024. day ' + day;
 
 function part1() {
     const inputArr = input.split('\n').map(item => BigInt(item));

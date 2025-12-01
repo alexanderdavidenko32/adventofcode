@@ -5,7 +5,7 @@ import fs from 'fs';
 
     const input1 = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-    const timeLabel = 'AOC 2023. day ' + day;
+    const timeLabel = 'AOC 2024. day ' + day;
 
     const input = `190: 10 19
 3267: 81 40 27

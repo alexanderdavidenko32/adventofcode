@@ -5,7 +5,7 @@ import fs from 'fs';
 
     const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-    const timeLabel = 'AOC 2023. day ' + day;
+    const timeLabel = 'AOC 2024. day ' + day;
 
     const [registerLine, programLine] = input.split('\n\n');
     let [regA, regB, regC] = registerLine.split('\n').map(line => {

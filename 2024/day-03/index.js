@@ -5,7 +5,7 @@ import fs from 'fs';
 
         const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-        const timeLabel = 'AOC 2023. day ' + day;
+        const timeLabel = 'AOC 2024. day ' + day;
 
         const input1 = `xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))`;
         function part1() {

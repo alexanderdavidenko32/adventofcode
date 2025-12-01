@@ -4,7 +4,7 @@ const day = '24';
 
 const input = fs.readFileSync(`../inputs/${day}.txt`, 'utf8');
 
-const timeLabel = 'AOC 2023. day ' + day;
+const timeLabel = 'AOC 2024. day ' + day;
 
 const [wires, logic] = input.split('\n\n');
 const wiresArr = wires.split('\n').map(item => item.split(': '));
